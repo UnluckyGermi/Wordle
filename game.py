@@ -78,13 +78,7 @@ def end(victory, word):
 
 if __name__ == "__main__":
 
-    if len(sys.argv) < 2:
-        print("[!] Uso: python3 " + sys.argv[0] + " <Diccionario>")
-        exit(1)
-
-    path = sys.argv[1]
-
-    dic = loadDic(path)
+    dic = loadDic("./dic/five-letter-spanish-common.txt")
     fullDic = removeAccents(loadDic("./dic/five-letter-spanish-full.txt"))
 
     global wordToGuess
