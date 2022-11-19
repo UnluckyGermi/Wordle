@@ -36,7 +36,7 @@ def prettyPrint(word, matches):
         time.sleep(.2)
     print()
 def loadDic(path):
-    file = open(path, 'r')
+    file = open(path, 'r', encoding='utf-8')
     words = file.read()
     file.close()
     return words.split('\n')
