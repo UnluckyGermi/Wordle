@@ -76,8 +76,8 @@ def matchWords(word):
     return (green, yellow)
 
 def end(victory, word):
-    if victory: print(colors.GREEN + "¡Has ganado!")
-    else: print(colors.RED + "Has perdido, la palabra era: " + colors.YELLOW + colors.BOLD + word)
+    if victory: print(colors.GREEN + "¡Has ganado!" + colors.ENDC)
+    else: print(colors.RED + "Has perdido, la palabra era: " + colors.YELLOW + colors.BOLD + word + colors.ENDC)
     exit(0)
 
 if __name__ == "__main__":
