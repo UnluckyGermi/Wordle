@@ -35,6 +35,7 @@ def prettyPrint(word, matches):
         sys.stdout.flush()
         time.sleep(.2)
     print()
+
 def loadDic(path):
     file = open(path, 'r', encoding='utf-8')
     words = file.read()
@@ -50,6 +51,9 @@ def removeAccents(dic):
 
 def selectRandomWord(dic):
     return random.choice(dic)
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def matchWords(word):
 
@@ -85,7 +89,8 @@ if __name__ == "__main__":
     wordToGuess = unidecode.unidecode(selectRandomWord(dic).lower())
     signal(SIGINT, handler)
 
-    os.system('clear')
+    clear()
+
     print(colors.CYAN + colors.UNDERLINE + colors.BOLD + "\n===== WORDLE =====" + colors.ENDC)
     
     userWords = []
